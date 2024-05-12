@@ -55,49 +55,49 @@ var content = [
   },
 ];
 
-$(document).ready(function () {
-  var timer = 0;
+// $(document).ready(function () {
+//   var timer = 0;
 
-  content.forEach(function (item) {
-    var expandable = `
-            <div class="expandable" id="${item.id}">
-                <button class="close-btn">&#10005;</button>
-                <div class="expandable-flex">
-                    <div class="description">
-                        <p>${item.desc}</p>
-                    </div>
-                    <div class="profile">
-                        <img src="${item.img}" />
-                        <div class="name">${item.name}</div>
-                        <div class="title">${item.title}</div>
-                        <div class="socials">
-                            <b>M:</b> ${item.mobile}<br />
-                            <b>E:</b> <a href="mailto:${item.email}">${item.email}</a><br />
-                        </div>
-                    </div>
-                </div>
-            </div>`;
-    // expandable = $($.parseHTML(expandable));
-    // expandable.addClass("expandable");
-    $(".tbar").append(expandable);
-  });
+//   content.forEach(function (item) {
+//     var expandable = `
+//             <div class="expandable" id="${item.id}">
+//                 <button class="close-btn">&#10005;</button>
+//                 <div class="expandable-flex">
+//                     <div class="description">
+//                         <p>${item.desc}</p>
+//                     </div>
+//                     <div class="profile">
+//                         <img src="${item.img}" />
+//                         <div class="name">${item.name}</div>
+//                         <div class="title">${item.title}</div>
+//                         <div class="socials">
+//                             <b>M:</b> ${item.mobile}<br />
+//                             <b>E:</b> <a href="mailto:${item.email}">${item.email}</a><br />
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>`;
+//     // expandable = $($.parseHTML(expandable));
+//     // expandable.addClass("expandable");
+//     $(".tbar").append(expandable);
+//   });
 
-  $(".label").click(function () {
-    if ($(this).hasClass("activelabel")) {
-      return;
-    }
-    $(".label").removeClass("activelabel");
-    $(this).addClass("activelabel");
-    var target = $(this).data("target");
-    $(".expandable").slideUp(300);
-    setTimeout(function () {
-      $(target).slideDown(300);
-    }, timer);
-    timer = 300;
-  });
-  $(".close-btn").click(function () {
-    $(this).parent().slideUp();
-    $(".label").removeClass("activelabel");
-    timer = 0;
-  });
-});
+//   $(".label").click(function () {
+//     if ($(this).hasClass("activelabel")) {
+//       return;
+//     }
+//     $(".label").removeClass("activelabel");
+//     $(this).addClass("activelabel");
+//     var target = $(this).data("target");
+//     $(".expandable").slideUp(300);
+//     setTimeout(function () {
+//       $(target).slideDown(300);
+//     }, timer);
+//     timer = 300;
+//   });
+//   $(".close-btn").click(function () {
+//     $(this).parent().slideUp();
+//     $(".label").removeClass("activelabel");
+//     timer = 0;
+//   });
+// });
