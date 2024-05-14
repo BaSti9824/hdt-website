@@ -1,4 +1,4 @@
-var content = [
+var tbarcontent = [
   {
     id: "sea",
     service: "Suchmaschinenwerbung",
